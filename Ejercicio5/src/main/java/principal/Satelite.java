@@ -22,4 +22,10 @@ public class Satelite {
 	public void printPosicion(){
 		System.out.println("El satélite se encuentra en el paralelo "+this.paralelo+ "Meridiano "+this.meridiano+" a una distancia de la tierra de "+this.distancia_tierra+"Kilómetros");
 	}
+	boolean EnOrbita() {
+		if(distancia_tierra == 0)
+			return false;
+		else
+			return true;
+	}
 }

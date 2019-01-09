@@ -44,4 +44,37 @@ public class TestSatelite {
 		assertEquals(satelite.paralelo, 44, 0);
 		assertEquals(satelite.distancia_tierra, 88, 0);
 	}
+	
+	@Test
+	public void TestVariarAlturas() {
+		double desplazamiento = 10;
+		meridiano = 11;
+		paralelo = 22;
+		distancia_tierra = 44;
+		Satelite satelite = new Satelite(meridiano, paralelo, distancia_tierra);
+		satelite.VariaAltura(desplazamiento);
+		assertEquals(satelite.distancia_tierra, 54, 0);
+	}
+	
+	@Test
+	public void TestEnOrbita() {
+		distancia_tierra = 44;
+		meridiano = 11;
+		paralelo = 22;
+		Satelite satelite = new Satelite(meridiano, paralelo, distancia_tierra);
+		assertEquals(satelite.EnOrbita(), true);
+	}
+	
+	@Test
+	public void TestVariarPosicion() {
+		double m = 10;
+		double p = 20;
+		distancia_tierra = 44;
+		meridiano = 11;
+		paralelo = 22;
+		Satelite satelite = new Satelite(meridiano, paralelo, distancia_tierra);
+		satelite.VariarPosicion(p, m);
+		assertEquals(satelite.meridiano, 21, 0);
+		assertEquals(satelite.paralelo, 42, 0);
+	}
 }

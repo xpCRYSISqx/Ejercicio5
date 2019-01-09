@@ -28,12 +28,10 @@ public class Satelite {
 		this.distancia_tierra = this.distancia_tierra + desplazamiento;
 	}
 	
-	public	boolean EnOrbita() {
-	 
+	public boolean EnOrbita() {
 		if(distancia_tierra == 0)
 			return false;
 		else
 			return true;
-
 	}
 }

@@ -35,8 +35,10 @@ public class Satelite {
 			return true;
 	}
 	
-	public void VariarPosicion(double variap, double variam) {
-		this.meridiano = this.meridiano + variam;
-		this.paralelo = this.paralelo + variap;
+	public void VariaPosicion() {
+		if(meridiano == 0) {
+			System.out.println("se ha movido el satelite");
+		}
+			
 	}
 }

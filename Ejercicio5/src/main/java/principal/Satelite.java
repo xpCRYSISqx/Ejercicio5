@@ -24,21 +24,19 @@ public class Satelite {
 	}
 
 	
-	public void VariaAltura(double desplazamiento) {
+	public void VariaAltura(double desplazamiento){
 		this.distancia_tierra = this.distancia_tierra + desplazamiento;
 	}
 	
-	public boolean EnOrbita() {
+	public boolean EnOrbita(){
 		if(distancia_tierra == 0)
 			return false;
 		else
 			return true;
 	}
 	
-	public void VariaPosicion() {
-		if(meridiano == 0) {
-			System.out.println("se ha movido el satelite");
-		}
-			
+	public void VariarPosicion(double variap, double variam){
+		this.meridiano = this.meridiano + variam;
+		this.paralelo = this.paralelo + variap;
 	}
 }

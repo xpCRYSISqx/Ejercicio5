@@ -44,4 +44,13 @@ public class TestSatelite {
 		assertEquals(satelite.paralelo, 44, 0);
 		assertEquals(satelite.distancia_tierra, 88, 0);
 	}
+	
+	@Test
+	public void TestEnOrbita() {
+		distancia_tierra = 0;
+		meridiano = 44;
+		paralelo = 12;
+		Satelite satelite = new Satelite(meridiano, paralelo, distancia_tierra);
+		assertEquals(satelite.EnOrbita(), false);
+	}
 }
